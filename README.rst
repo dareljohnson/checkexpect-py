@@ -9,8 +9,8 @@ checkexpect
 .. |version| image:: http://img.shields.io/pypi/v/checkexpect.svg?style=flat
 .. _version: https://pypi.python.org/pypi/checkexpect
 
-checkexpect is a simple unit testing framework for python development <https://github.com/dareljohnson/checkexpect-py>`_
-library. checkexpect is a mature, viable way to make your test-driven development drive the design of your data,
+checkexpect is a simple unit testing framework for python development `<https://pypi.python.org/pypi/checkexpect>`_
+python library. checkexpect is a mature, viable way to make your test-driven development drive the design of your data,
 and your data drive the design of your functions.  It's also a simple tool that allows you to execute unit tests inline
 with your code, in a systematic way.
 
