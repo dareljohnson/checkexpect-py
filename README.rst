@@ -65,7 +65,7 @@ Installation
       code_statement_A = 12 * 12      # used in the function body
 
       # check the algor1thm design of our square function, and unit test it at the same time
-	  checkExpect(square, 12, 144, "Square of a number")
+      checkExpect(square, 12, 144, "Square of a number")
 
       # Or just pass our examples
       checkExpect(square, num_to_square, code_statement_A, "Square of a number")
