@@ -58,8 +58,8 @@ Installation
 
       # define a function
       def square(a):
-		  return a * a                # could replace return statement with (lambda a: math.pow(a, 2)) from code_statement_B below.
-
+		  return a * a                # could replace return statement with (lambda a: math.pow(a, 2)) 
+                                              # from code_statement_B below.
       # examples
       num_to_square = 12
       code_statement_A = 12 * 12      # used in the function body
