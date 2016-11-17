@@ -75,9 +75,9 @@ Installation
       checkExpect(square, num_to_square, code_statement_B, "Square of a number")
 
 
-4. Execute your python script from the command line (terminal) to see the unit test results. Most tests usually fail (:red:`RED`) in the beginning.
+4. Execute your python script from the command line (terminal) to see the unit test results. Most tests usually fail (RED) in the beginning.
 
-5. Refactor your code and execute your script until all functions under test, turn :green:`GREEN`.
+5. Refactor your code and execute your script until all functions under test, turn GREEN.
 
 6. That's it! You're done.
 
