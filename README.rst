@@ -51,8 +51,6 @@ Installation
 3. Write some code and test it using checkexpect inline with your code.
 
    .. code:: python
-   .. role:: red
-   .. role:: green
 
       # import packages
 	  from checkexpect import *
