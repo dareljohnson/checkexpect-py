@@ -85,6 +85,18 @@ Installation
 
 6. That's it! You're done.
 
+Upgrades
+-------------
+
+1. Upgrade checkexpect.
+
+   .. code:: python
+
+      pip install checkexpect -U
+
+
+That command will upgrade an existing installation of checkexpect.
+
 
 Configuration
 -------------
