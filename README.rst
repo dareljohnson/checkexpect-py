@@ -10,7 +10,7 @@ checkexpect
 .. _version: https://pypi.python.org/pypi/checkexpect
 
 checkexpect is a simple unit testing framework for python development `<https://pypi.python.org/pypi/checkexpect>`_
-python library. checkexpect is a mature, viable way to make your test-driven development drive the design of your data,
+in a python library. checkexpect is a mature, viable way to make your test-driven development drive the design of your data,
 and your data drive the design of your functions.  It's also a simple tool that allows you to execute unit tests inline
 with your code, in a systematic way.
 
@@ -114,7 +114,7 @@ abandoned in 2013 and was brought back to life as checkexpect by our team in
 2016. In the process, most of the project was refactored and brought up to speed
 with modern python best practices. The work done prior to the 2013 rewrite is
 licensed under MIT. Improvements since then are licensed under MIT.
-See `LICENSE <https://github.com/dareljohnson/checkexpect-py/LICENSE>`_ for more details.
+See `LICENSE <https://github.com/dareljohnson/checkexpect-py/>`_ for more details.
 
 SemVer
 ------
