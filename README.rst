@@ -23,7 +23,7 @@ Features
 * [x] Support for inline unit tests. checkExpect will support test created in another directory as well.
 * [x] Support for TDD and DDD development.
 * [x] Support for Systematic Program Design methods using HtDD and HtDF recipes.
-* [x] Support for code coded terminal (console) output.
+* [x] Support for color coded terminal (console) output.
 
 
 TODO
@@ -79,6 +79,7 @@ Installation
       # Or use lambda expressions
       code_statement_B = lambda a: math.pow(a, 2)
       checkExpect(square, num_to_square, code_statement_B(12), "Square of a number")
+
 
 
 4. Execute your python script from the command line (terminal) to see the unit test results. Most tests usually fail (RED) in the beginning.
