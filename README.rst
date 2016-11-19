@@ -44,25 +44,29 @@ Installation
 
    .. code:: python
 
+      #!/usr/bin/env python
+
       # import package
-      from checkexpect import *
+      from checkexpect.core import checkExpect
 
 
 3. Write some code and test it using checkexpect inline with your code.
 
    .. code:: python
 
+      #!/usr/bin/env python
+
       # import packages
-      from checkexpect import *
+      from checkexpect.core import checkExpect
       import math
 
       # define a function
       def square(a):
-	  return a * a                # could replace return statement with (lambda a: math.pow(a, 2)) 
+	  return a * a                    # could replace return statement with (lambda a: math.pow(a, 2))
                                       # from code_statement_B below.
       # examples
       num_to_square = 12
-      code_statement_A = 12 * 12      # used in the function body
+      code_statement_A = 12 * 12       # used in the function body
 
       # check the algor1thm design of our square function, and unit test it at the same time
       checkExpect(square, 12, 144, "Square of a number")
@@ -71,8 +75,8 @@ Installation
       checkExpect(square, num_to_square, code_statement_A, "Square of a number")
 
       # Or use lambda expressions
-      code_statement_B = (lambda a: math.pow(a, 2))
-      checkExpect(square, num_to_square, code_statement_B, "Square of a number")
+      code_statement_B = lambda a: math.pow(a, 2)
+      checkExpect(square, num_to_square, code_statement_B(12), "Square of a number")
 
 
 4. Execute your python script from the command line (terminal) to see the unit test results. Most tests usually fail (RED) in the beginning.
