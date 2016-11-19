@@ -14,9 +14,7 @@ Package Your Project
             python setup.py sdist           <-- this creates a dist/ folder
     (2) Create a Wheel
             python setup.py bdist_wheel     <-- this create a wheel file
-    (3) Register project
-            twine register dist/mypkg.whl   <-- rename wheel file before running this command
-    (4) Upload your distribution
+    (3) Upload your distribution
             twine upload dist/*
 """
 
@@ -43,7 +41,7 @@ setup(
   # You can just specify the packages manually here if your project is
   # simple. Or you can use find_packages().
   # Your Included Package name, must be the same as the name above
-  packages=find_packages(['checkexpect'],exclude=['contrib', 'docs', 'tests*']),
+  packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
 
   # List run-time dependencies here.  These will be installed by pip when
   # your project is installed. For an analysis of "install_requires" vs pip's
