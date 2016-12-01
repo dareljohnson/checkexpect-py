@@ -19,15 +19,12 @@ def reportResult():
     total = results["total"]
     bad = results["bad"]
     passed = total - bad
-<<<<<<< HEAD
     if (passed >= 1 and total >= 1):
         print(Fore.LIGHTWHITE_EX + "Of " + str(total) + " tests run, " + str(bad) +
               " failed, and " + str(passed) + " passed.")
-=======
     if (passed <= 1 and total <= 1):
         print(Fore.YELLOW + "Of " + str(total) + " tests run, " + Fore.RED + str(bad) +
               " failed, " + Fore.GREEN + "and " + str(passed) + " passed.")
->>>>>>> 3928ebee3d352e851f86aa8ae0b2c5fd3f3fb846
     else:
         print(Fore.GREEN + "Of " + str(total) + " tests, " + Fore.RED + str(bad) +
               " failed, " + Fore.GREEN + str(passed) + " passed.")

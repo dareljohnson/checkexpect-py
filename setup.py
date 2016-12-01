@@ -52,11 +52,7 @@ setup(
   # Versions should comply with PEP440.  For a discussion on single-sourcing
   # the version across setup.py and the project code, see
   # https://packaging.python.org/en/latest/single_source_version.html
-<<<<<<< HEAD
-  version = '1.0.9',
-=======
-  version = '1.0.8',
->>>>>>> 3928ebee3d352e851f86aa8ae0b2c5fd3f3fb846
+  version = '1.0.10',
 
   # Project's description
   description = 'checkexpect is a simple unit testing framework for python development',
