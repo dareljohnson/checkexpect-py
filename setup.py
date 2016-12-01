@@ -14,9 +14,7 @@ Package Your Project
             python setup.py sdist           <-- this creates a dist/ folder
     (2) Create a Wheel
             python setup.py bdist_wheel     <-- this create a wheel file
-    (3) Register project
-            twine register dist/mypkg.whl   <-- rename wheel file before running this command
-    (4) Upload your distribution
+    (3) Upload your distribution
             twine upload dist/*
 """
 
@@ -43,7 +41,7 @@ setup(
   # You can just specify the packages manually here if your project is
   # simple. Or you can use find_packages().
   # Your Included Package name, must be the same as the name above
-  packages=find_packages(['checkexpect'],exclude=['contrib', 'docs', 'tests*']),
+  packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
 
   # List run-time dependencies here.  These will be installed by pip when
   # your project is installed. For an analysis of "install_requires" vs pip's
@@ -54,7 +52,11 @@ setup(
   # Versions should comply with PEP440.  For a discussion on single-sourcing
   # the version across setup.py and the project code, see
   # https://packaging.python.org/en/latest/single_source_version.html
+<<<<<<< HEAD
   version = '1.0.9',
+=======
+  version = '1.0.8',
+>>>>>>> 3928ebee3d352e851f86aa8ae0b2c5fd3f3fb846
 
   # Project's description
   description = 'checkexpect is a simple unit testing framework for python development',

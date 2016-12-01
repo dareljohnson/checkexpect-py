@@ -10,7 +10,7 @@ checkexpect
 .. _version: https://pypi.python.org/pypi/checkexpect
 
 checkexpect is a simple unit testing framework for python development `<https://pypi.python.org/pypi/checkexpect>`_
-python library. checkexpect is a mature, viable way to make your test-driven development drive the design of your data,
+in a python library. checkexpect is a mature, viable way to make your test-driven development drive the design of your data,
 and your data drive the design of your functions.  It's also a simple tool that allows you to execute unit tests inline
 with your code, in a systematic way.
 
@@ -23,7 +23,7 @@ Features
 * [x] Support for inline unit tests. checkExpect will support test created in another directory as well.
 * [x] Support for TDD and DDD development.
 * [x] Support for Systematic Program Design methods using HtDD and HtDF recipes.
-* [x] Support for code coded terminal (console) output.
+* [x] Support for color coded terminal (console) output.
 
 
 TODO
@@ -44,25 +44,31 @@ Installation
 
    .. code:: python
 
+      #!/usr/bin/env python
+
       # import package
-      from checkexpect import *
+      from checkexpect.core import checkExpect
 
 
 3. Write some code and test it using checkexpect inline with your code.
 
    .. code:: python
 
+      #!/usr/bin/env python
+
       # import packages
-      from checkexpect import *
+      from checkexpect.core import checkExpect
       import math
+
+      # Usage: checkExpect(function|object|type, param, expected value, "a description of the test")
 
       # define a function
       def square(a):
-	  return a * a                # could replace return statement with (lambda a: math.pow(a, 2)) 
-                                      # from code_statement_B below.
+        return a * a                    # could replace return statement with (lambda a: math.pow(a, 2))
+                                        # from code_statement_B below.
       # examples
       num_to_square = 12
-      code_statement_A = 12 * 12      # used in the function body
+      code_statement_A = 12 * 12        # used in the function body
 
       # check the algor1thm design of our square function, and unit test it at the same time
       checkExpect(square, 12, 144, "Square of a number")
@@ -71,8 +77,9 @@ Installation
       checkExpect(square, num_to_square, code_statement_A, "Square of a number")
 
       # Or use lambda expressions
-      code_statement_B = (lambda a: math.pow(a, 2))
-      checkExpect(square, num_to_square, code_statement_B, "Square of a number")
+      code_statement_B = lambda a: math.pow(a, 2)
+      checkExpect(square, num_to_square, code_statement_B(12), "Square of a number")
+
 
 
 4. Execute your python script from the command line (terminal) to see the unit test results. Most tests usually fail (RED) in the beginning.
@@ -80,6 +87,18 @@ Installation
 5. Refactor your code and execute your script until all functions under test, turn GREEN.
 
 6. That's it! You're done.
+
+Upgrades
+-------------
+
+1. Upgrade checkexpect.
+
+   .. code:: python
+
+      pip install checkexpect -U
+
+
+That command will upgrade an existing installation of checkexpect.
 
 
 Configuration
@@ -98,7 +117,7 @@ abandoned in 2013 and was brought back to life as checkexpect by our team in
 2016. In the process, most of the project was refactored and brought up to speed
 with modern python best practices. The work done prior to the 2013 rewrite is
 licensed under MIT. Improvements since then are licensed under MIT.
-See `LICENSE <https://github.com/dareljohnson/checkexpect-py/LICENSE>`_ for more details.
+See `LICENSE <https://github.com/dareljohnson/checkexpect-py/>`_ for more details.
 
 SemVer
 ------
