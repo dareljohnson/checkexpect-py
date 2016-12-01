@@ -19,8 +19,8 @@ def reportResult():
     total = results["total"]
     bad = results["bad"]
     passed = total - bad
-    if (passed <= 1 and total <= 1):
-        print(Fore.YELLOW + "Of " + str(total) + " tests run, " + str(bad) +
+    if (passed >= 1 and total >= 1):
+        print(Fore.LIGHTWHITE_EX + "Of " + str(total) + " tests run, " + str(bad) +
               " failed, and " + str(passed) + " passed.")
     else:
         print(Fore.GREEN + "Of " + str(total) + " tests, " + str(bad) +
@@ -35,15 +35,27 @@ def reportResult():
 # param can be of any data type
 # expected value can be of any data type
 def checkExpect(f, a, expected, name=None):
-    results['total'] += 1
     result = f(a)
     if (name is not None):
         print(Fore.WHITE + "> for unit test: " + name)
     else:
-        print(Fore.WHITE + "> for unit test: " + "unknown test")
+        print(Fore.WHITE + "> for unit test: " + "unknown description test")
 
     if (result != expected):
-        results['bad'] += 1
+        print("test: " + Fore.RED + "failed")
         print(Fore.RED + "Expected " + str(expected) + ", but was " + str(result))
+        print("info: " + Fore.LIGHTYELLOW_EX + "Algorithm design is not well formed!")
+        print("")
+        print(Style.RESET_ALL)
+        results['bad'] += 1
+        results['total'] += 1
+    else:
+        print("test: " + Fore.GREEN + "passed")
+        print("Function: " + str(f) + " consumed the following argument(s) " + str(a) +
+              ", and produced " + str(result) + ", which matches " + str(expected) + " the expected result.")
+        print("info: " + Fore.LIGHTBLUE_EX + "Algorithm is well formed!")
+        print("")
+        print(Style.RESET_ALL)
+        results['total'] += 1
 
     reportResult()

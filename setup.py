@@ -22,9 +22,9 @@ Package Your Project
 
 # Always prefer setuptools over distutils
 try:
-    from setuptools import setup, find_packages
-except ImportError:
     from distutils.core import setup, find_packages
+except ImportError:
+    from setuptools import setup, find_packages
 
 # To use a consistent encoding
 from codecs import open
@@ -54,7 +54,7 @@ setup(
   # Versions should comply with PEP440.  For a discussion on single-sourcing
   # the version across setup.py and the project code, see
   # https://packaging.python.org/en/latest/single_source_version.html
-  version = '1.0.1',
+  version = '1.0.9',
 
   # Project's description
   description = 'checkexpect is a simple unit testing framework for python development',
