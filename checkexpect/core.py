@@ -19,9 +19,6 @@ def reportResult():
     total = results["total"]
     bad = results["bad"]
     passed = total - bad
-    if (passed >= 1 and total >= 1):
-        print(Fore.LIGHTWHITE_EX + "Of " + str(total) + " tests run, " + str(bad) +
-              " failed, and " + str(passed) + " passed.")
     if (passed <= 1 and total <= 1):
         print(Fore.YELLOW + "Of " + str(total) + " tests run, " + Fore.RED + str(bad) +
               " failed, " + Fore.GREEN + "and " + str(passed) + " passed.")
@@ -37,8 +34,17 @@ def reportResult():
 # param and expected value
 # param can be of any data type
 # expected value can be of any data type
-def checkExpect(f, a, expected, name=None):
-    result = f(a)
+def checkExpect(f, a, expected, name= None):
+    params = []
+    result = None
+    if not a is None and not isinstance(a, list):
+        result = f(a)
+    elif isinstance(a, list):
+        inputs = a
+        for i in inputs:
+            params.append(i)
+        result = f(params)
+
     if (name is not None):
         print(Fore.WHITE + "> for unit test: " + name)
     else:
@@ -54,7 +60,7 @@ def checkExpect(f, a, expected, name=None):
         results['total'] += 1
     else:
         print("test: " + Fore.GREEN + "passed")
-        print("Function: " + str(f) + " consumed the following argument(s) " + str(a) +
+        print("Function tested: consumed the following argument(s) " + str(a) +
               ", and produced " + str(result) + ", which matches " + str(expected) + " the expected result.")
         print("info: " + Fore.LIGHTBLUE_EX + "Algorithm is well formed!")
         print("")

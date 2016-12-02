@@ -8,6 +8,7 @@ https://github.com/pypa/sampleproject
 Requirements
 Install "twine"
     pip install twine
+    pip install wheel
 
 Package Your Project
     (1) Build Source Distribution
@@ -52,7 +53,7 @@ setup(
   # Versions should comply with PEP440.  For a discussion on single-sourcing
   # the version across setup.py and the project code, see
   # https://packaging.python.org/en/latest/single_source_version.html
-  version = '1.0.11',
+  version = '1.0.19',
 
   # Project's description
   description = 'checkexpect is a simple unit testing framework for python development',

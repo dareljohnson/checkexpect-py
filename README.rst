@@ -20,7 +20,7 @@ last updated in 2016.
 Features
 --------
 
-* [x] Support for inline unit tests. checkExpect will support test created in another directory as well.
+* [x] Support for inline unit tests. checkExpect will support tests created in another directory as well.
 * [x] Support for TDD and DDD development.
 * [x] Support for Systematic Program Design methods using HtDD and HtDF recipes.
 * [x] Support for color coded terminal (console) output.
@@ -80,6 +80,28 @@ Installation
       code_statement_B = lambda a: math.pow(a, 2)
       checkExpect(square, num_to_square, code_statement_B(12), "Square of a number")
 
+      # add up a list of numbers
+
+      # examples
+      param1 = [1,2,9]
+
+      def add(args):
+          total = 0
+          for i in args:
+              total = i + total
+          return total
+
+      checkExpect(add, param1, 12, "Add two numbers")
+
+      # Create a string from an arbitrary list of strings
+
+      # examples
+      param3 = [ "Darel", "Johnson"]
+      def string_together(los):
+          newStr = [ str.strip() for str in los]
+          return " ".join(newStr)
+
+      checkExpect(string_together, param3,"Darel Johnson")
 
 
 4. Execute your python script from the command line (terminal) to see the unit test results. Most tests usually fail (RED) in the beginning.
